@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quatro Dias — Um Presente do Meu Coração</title>
+  <meta name="description" content="Um presente especial preparado com amor para acompanhar você a cada dia na presença de Deus.">
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="app-container">
+    
+    <!-- TELA 1: INTRODUÇÃO -->
+    <section id="screen-intro" class="screen active">
+      <div class="heart-container">
+        <!-- SVG Heart pulsing -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="heart-svg">
+          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+        </svg>
+      </div>
+
+      <h1 class="intro-title">Enquanto Eu Estou Longe...</h1>
+      
+      <p class="intro-subtitle">
+        Preparei um pequeno presente para cada dia do meu acampamento. 
+        Mesmo longe, estaremos caminhando juntos na presença de Deus.
+      </p>
+
+      <div class="verse-card">
+        <blockquote class="verse-text">
+          "O amor tudo desculpa, tudo crê, tudo espera e tudo suporta."
+        </blockquote>
+        <cite class="verse-reference">1 Coríntios 13:7</cite>
+      </div>
+
+      <button id="btn-enter" class="btn-enter" aria-label="Entrar e ver os presentes">
+        Entrar ❤️
+      </button>
+    </section>
+
+    <!-- TELA 2: LISTAGEM DE CARTÕES (DIAS) -->
+    <section id="screen-days" class="screen">
+      <header class="days-header">
+        <h2>Seus Presentes</h2>
+        <p>Um carinho diário esperando por você durante a minha viagem.</p>
+        
+        <!-- Painel de Contagem Regressiva -->
+        <div id="countdown-container" class="countdown-container" style="display: none;">
+          <span class="countdown-label">Próximo presente em:</span>
+          <span id="countdown-timer" class="countdown-timer">Carregando...</span>
+        </div>
+      </header>
+
+      <div class="days-grid">
+        
+        <!-- CARD DIA 1 -->
+        <a href="javascript:void(0)" class="day-card locked" id="card-day-1">
+          <div class="card-header">
+            <span class="card-day">DIA 1</span>
+            <span class="card-date">09 de Julho</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-theme text-locked">Confiança</h3>
+            <p class="card-desc text-locked">Uma palavra sobre descansar nosso coração na certeza do cuidado de Deus.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-btn">🔒 Disponível em breve</span>
+            <div class="card-icon-wrapper">
+              <svg class="icon-heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+              </svg>
+              <svg class="icon-lock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- CARD DIA 2 -->
+        <a href="javascript:void(0)" class="day-card locked" id="card-day-2">
+          <div class="card-header">
+            <span class="card-day">DIA 2</span>
+            <span class="card-date">10 de Julho</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-theme text-locked">Gratidão</h3>
+            <p class="card-desc text-locked">Reconhecer a beleza da sua vida e da nossa caminhada juntos.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-btn">🔒 Disponível em breve</span>
+            <div class="card-icon-wrapper">
+              <svg class="icon-heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+              </svg>
+              <svg class="icon-lock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- CARD DIA 3 -->
+        <a href="javascript:void(0)" class="day-card locked" id="card-day-3">
+          <div class="card-header">
+            <span class="card-day">DIA 3</span>
+            <span class="card-date">11 de Julho</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-theme text-locked">Entrega</h3>
+            <p class="card-desc text-locked">Entregar com amor cada passo do nosso futuro nas mãos do Pai.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-btn">🔒 Disponível em breve</span>
+            <div class="card-icon-wrapper">
+              <svg class="icon-heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+              </svg>
+              <svg class="icon-lock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- CARD DIA 4 -->
+        <a href="javascript:void(0)" class="day-card locked" id="card-day-4">
+          <div class="card-header">
+            <span class="card-day">DIA 4</span>
+            <span class="card-date">12 de Julho</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-theme text-locked">Esperança</h3>
+            <p class="card-desc text-locked">A expectativa bonita de nos reencontrarmos fortalecidos pela fé.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-btn">🔒 Disponível em breve</span>
+            <div class="card-icon-wrapper">
+              <svg class="icon-heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+              </svg>
+              <svg class="icon-lock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Interactive JavaScript logic -->
+  <script src="script.js"></script>
+</body>
+</html>
